@@ -1,0 +1,26 @@
+<p>players works!</p>
+<nb-layout-header class="header">
+    <h5>Welcome to User's ToDo page !</h5>
+</nb-layout-header>
+
+
+<h1> Details for players.</h1>
+<div>
+    <table class="table">
+        <thead style="background-color:rgb(103, 126, 112)">
+            <tr>
+                <th scope="col">player Name</th>
+                <th scope="col">player Team</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor='let p of players'>
+            b={{b}}
+            <tr *ngIf= "p.Team != 'Port'">
+                <th scope="row">{{ p.name }}</th>
+                <td>{{ p.Team }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
